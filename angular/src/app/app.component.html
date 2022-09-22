@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>
+    Angular & Laravel assignment
+  </h1>
+  <hr />
+  <form (ngSubmit)="onSubmit(fm.value)" #fm="ngForm">
+      <div class="form-group">
+        <label for="name">Email:</label>
+        <input type="text" class="form-control" ngModel name="email">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
