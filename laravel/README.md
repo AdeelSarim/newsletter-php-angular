@@ -9,16 +9,10 @@
 
 ## Assumptions
 
-- Authentication and Authorization are not required
-- Bank names are unique
-- Account names inside a bank are unique
-- Inter bank transactions are not allowed
-- Date field in transaction cannot be in the past
-- Transactions can records with date in future will be marked pending and processed on their respective dates.
-- Only non duplicate transactions with dates in future can be updated
-- Bank can also be sender or recepient of transaction depicting cash deposits, service charges and other deductions
-- Effects of duplicate marked transactions are reverted if it was processed previously.
-- System should not allow updation of duplicate records.
+- Email field completed in a form on the page is submitted to backend
+- The email address is added to a newsletter recipients table
+- Dispatch an event for when the newsletter is added
+- Queue up a job that is responsible for sending the newsletter email to the given email address using a listener
 
 ## Dependencies
 
